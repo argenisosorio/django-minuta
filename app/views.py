@@ -9,13 +9,15 @@ from django.views.generic import CreateView, TemplateView, ListView
 from django.core.urlresolvers import reverse_lazy
 from django.core.urlresolvers import reverse
 from .models import *
+from .forms import MinutaForm
 
 
 
 class Registro(CreateView):
 	template_name = "app/registro.html"
 	model = Minuta
-	fields = ['responsable', 'asistentes', 'asunto', 'fecha', 'hora_inicio', 'hora_final', 'puntos', 'acuerdos']
+	form_class = MinutaForm
+	#fields = ['responsable', 'asistentes', 'asunto', 'fecha', 'hora_inicio', 'hora_final', 'puntos', 'acuerdos']
 	success_url = reverse_lazy('registrado')
 
 

@@ -1,10 +1,54 @@
 {% extends "base/base.html" %}
 {% block titulo %}Registro{% endblock %}
 {% block cuerpo %}
-<h1>Registro</h1>
+<h1>Minuta</h1>
 <form method="POST"> {% csrf_token %}
-	<table>{{ form }}</table>
-	<input type="submit" value="Guardar">
-	<input type="reset" value="Limpiar campos">
+	<!--table>{{ form }}</table-->
+	<b>Responsable:</b> <br />
+	{{ form.responsable }}
+
+	<br />
+
+	<b>Asistentes:</b> <br />
+	{{ form.asistentes }}
+
+	<br />
+	
+	<b>Asunto:</b> <br />
+	{{ form.asunto }}
+
+	<br />
+	
+	<b>Fecha:</b> <br />
+	{{ form.fecha }}
+
+	<br />
+	
+	<b>Hora de inicio:</b> <br />
+	{{ form.hora_inicio }}
+
+	<br />
+	
+	<b>Hora de finalizacion:</b> <br />
+	{{ form.hora_final }}
+
+	<br />
+	
+	<b>Puntos tratados:</b> <br />
+	{{ form.puntos }}
+
+	<br />
+	
+	<b>Acuerdos:</b> <br />
+	{{ form.acuerdos }}
+
+	<br />
+	
+	<!--input type="submit" value="Guardar">
+	<input type="reset" value="Limpiar campos"-->
+	<button class="btn btn-success" type="submit">Guardar</button>
+	<button class="btn btn-info" type="reset">Limpiar</button>
 </form>
+
+<br />
 {% endblock %}
