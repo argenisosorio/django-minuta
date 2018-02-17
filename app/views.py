@@ -25,6 +25,6 @@ class Registrado(TemplateView):
 
 class Consulta(ListView):
     model = Minuta
-    fields = ['responsable', 'asistentes', 'asunto', 'fecha', 'hora_inicio', 'hora_final', 'puntos', 'acuerdos']
+    fields = ['responsable']
     template_name = "app/consulta.html"
     context_object_name = "lista"

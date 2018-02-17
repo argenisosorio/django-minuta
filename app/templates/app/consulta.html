@@ -6,25 +6,11 @@
   <tr>
     <td><b>N</b></td>
     <td><b>Responsable</b></td>
-    <td><b>Asistentes</b></td>
-    <td><b>Asunto</b></td>
-    <td><b>Fecha</b></td>
-    <td><b>Hora de Inicio</b></td>
-    <td><b>Hora de Finalizacion</b></td>
-    <td><b>Puntos Tratados</b></td>
-    <td><b>Acuerdos</b></td>
   </tr>
   {% for x in lista %}
   <tr>
     <td>{{ x.id }}</td>
     <td>{{ x.responsable }}</td>
-    <td>{{ x.asistentes }}</td>
-    <td>{{ x.asunto }}</td>
-    <td>{{ x.fecha }}</td>
-    <td>{{ x.hora_inicio }}</td>
-    <td>{{ x.hora_final }}</td>
-    <td>{{ x.puntos }}</td>
-    <td>{{ x.acuerdos }}</td>
   </tr>
   {% endfor %}
 </table>
