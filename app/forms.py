@@ -12,7 +12,7 @@ class MinutaForm(forms.ModelForm):
             'class': 'form-control input-md','style': 'width: 100%;',
             'data-toggle': 'tooltip','title': 'Responsable',
             'data-placement':'right', 'data-container':'body',
-        }), required = True)
+        }), required = False)
 
     asistentes = forms.CharField(label="Asistentes", widget=Textarea(attrs={
             'class': 'form-control input-md','style': 'width: 100%;',
@@ -24,25 +24,25 @@ class MinutaForm(forms.ModelForm):
             'class': 'form-control input-md','style': 'width: 100%;',
             'data-toggle': 'tooltip','title': 'Asunto',
             'data-placement':'right', 'data-container':'body',
-        }), required = True)
+        }), required = False)
 
     fecha = forms.CharField(label="Fecha", widget=TextInput(attrs={
             'class': 'form-control input-md','style': 'width: 100%;',
             'data-toggle': 'tooltip','title': 'Fecha',
             'data-placement':'right', 'data-container':'body',
-        }), required = True)
+        }), required = False)
     
     hora_inicio = forms.CharField(label="Hora de inicio", widget=TextInput(attrs={
             'class': 'form-control input-md','style': 'width: 100%;',
             'data-toggle': 'tooltip','title': 'Hora de inicio',
             'data-placement':'right', 'data-container':'body',
-        }), required = True)
+        }), required = False)
 
     hora_final = forms.CharField(label="Hora de finalizacion", widget=TextInput(attrs={
             'class': 'form-control input-md','style': 'width: 100%;',
             'data-toggle': 'tooltip','title': 'Hora de finalizacion',
             'data-placement':'right', 'data-container':'body',
-        }), required = True)
+        }), required = False)
 
     puntos = forms.CharField(label="Puntos tratados", widget=Textarea(attrs={
             'class': 'form-control input-md','style': 'width: 100%;',
