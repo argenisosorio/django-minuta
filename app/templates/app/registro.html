@@ -43,6 +43,23 @@
 <form method="POST"> {% csrf_token %}
 
   <div id="campos">
+
+    <b>Responsable:</b><br /><input id="id_responsable" name="responsable" type="text" /><br />
+
+    <b>Asistentes:</b><br /><input id="id_asistentes" name="asistentes" type="text" /><br />
+
+    <b>Asunto:</b><br /><input id="id_asunto" name="asunto" type="text" /><br />
+
+    <b>Fecha:</b><br /><input id="id_fecha" name="fecha" type="text" /><br />
+
+    <b>Hora de inicio:</b><br /><input id="id_hora_inicio" name="hora_inicio" type="text" /><br />
+
+    <b>Hora de finalización:</b><br /><input id="id_hora_final" name="hora_final" type="text" ><br />
+
+    <b>Puntos tratados:</b><br /><input id="id_puntos" name="puntos" type="text" /><br />
+
+    <b>Acuerdos:</b><br /><input id="id_acuerdos" name="acuerdos" type="text" /><br />
+
   </div>
 
   <br />
@@ -55,35 +72,35 @@
 <script type="text/javascript">
   $("document").ready(function(){
     $("#add_responsable").click(function () {
-      add_responsable = '<b>Responsable:</b><br /><input id="id_responsable" name="responsable" type="text" required /><br />';
+      add_responsable = '<b>Responsable:</b><br /><input id="id_responsable" name="responsable" type="text" /><br />';
       $("#campos").append(add_responsable);
     });
     $("#add_asistentes").click(function () {
-      add_asistentes = '<b>Asistentes:</b><br /><input id="id_asistentes" name="asistentes" type="text" required /><br />';
+      add_asistentes = '<b>Asistentes:</b><br /><input id="id_asistentes" name="asistentes" type="text" /><br />';
       $("#campos").append(add_asistentes);
     });
     $("#add_asunto").click(function () {
-      add_asunto = '<b>Asunto:</b><br /><input id="id_asunto" name="asunto" type="text" required /><br />';
+      add_asunto = '<b>Asunto:</b><br /><input id="id_asunto" name="asunto" type="text" /><br />';
       $("#campos").append(add_asunto);
     });
     $("#add_fecha").click(function () {
-      add_fecha = '<b>Fecha:</b><br /><input id="id_fecha" name="fecha" type="text" required /><br />';
+      add_fecha = '<b>Fecha:</b><br /><input id="id_fecha" name="fecha" type="text" /><br />';
       $("#campos").append(add_fecha);
     });
     $("#add_hora_inicio").click(function () {
-      add_hora_inicio = '<b>Hora de inicio:</b><br /><input id="id_hora_inicio" name="hora_inicio" type="text" required /><br />';
+      add_hora_inicio = '<b>Hora de inicio:</b><br /><input id="id_hora_inicio" name="hora_inicio" type="text" /><br />';
       $("#campos").append(add_hora_inicio);
     });
     $("#add_hora_final").click(function () {
-      add_hora_final = '<b>Hora de finalización:</b><br /><input id="id_hora_final" name="hora_final" type="text" required/><br />';
+      add_hora_final = '<b>Hora de finalización:</b><br /><input id="id_hora_final" name="hora_final" type="text" ><br />';
       $("#campos").append(add_hora_final);
     });
     $("#add_puntos").click(function () {
-      add_puntos = '<b>Puntos tratados:</b><br /><input id="id_puntos" name="puntos" type="text" required /><br />';
+      add_puntos = '<b>Puntos tratados:</b><br /><input id="id_puntos" name="puntos" type="text" /><br />';
       $("#campos").append(add_puntos);
     });
     $("#add_acuerdos").click(function () {
-      add_acuerdos = '<b>Acuerdos:</b><br /><input id="id_acuerdos" name="acuerdos" type="text" required /><br />';
+      add_acuerdos = '<b>Acuerdos:</b><br /><input id="id_acuerdos" name="acuerdos" type="text" /><br />';
       $("#campos").append(add_acuerdos);
     });
     $("#remove").click(function(){
