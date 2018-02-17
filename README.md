@@ -1,12 +1,23 @@
-Modelo de una minuta en Django 1.10
+# Proyecto que permite guardar minutas de reuniones.
 
-##Versiones
+## Versiones
 ```
 Django==1.10
 Python 2.7.x
 ```
 
-##Comandos para probar el proyecto
+## Cammpos del modelo de datos
+
+Responsable<br />
+Asistentes<br />
+Asunto<br />
+Fecha<br />
+Hora de inicio<br />
+Hora de finalización<br />
+Puntos tratados<br />
+Acuerdos<br />
+
+## Comandos para probar el proyecto
 
 $ python manage.py makemigrations
 
