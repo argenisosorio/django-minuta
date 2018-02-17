@@ -8,8 +8,6 @@ Python 2.7.x
 
 ##Comandos para probar el proyecto
 
-$ python manage.py migrate
-
 $ python manage.py makemigrations
 
 $ python manage.py makemigrations app
@@ -17,3 +15,4 @@ $ python manage.py makemigrations app
 $ python manage.py migrate
 
 $ python manage.py runserver
+

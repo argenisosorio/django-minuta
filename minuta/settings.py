@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Django settings for minuta project.
@@ -27,7 +26,7 @@ SECRET_KEY = '%49by8$gnwswkdcz-6gggyh384fdofab+0^s=*ltirc-zkmrjk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

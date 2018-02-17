@@ -1,10 +1,10 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django import forms
 from .models import Minuta
 from django.forms import (
     TextInput, CharField, Select, RadioSelect, Textarea, CheckboxInput
 )
+
 
 class MinutaForm(forms.ModelForm):
 
