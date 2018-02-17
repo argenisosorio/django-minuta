@@ -3,8 +3,39 @@
 {% block cuerpo %}
 <h1>Minuta</h1>
 
-<button id="add">Responsable</button>
-<button id="remove">Limpiar campos</button>
+<!-- Navbar
+================================================== -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agregar <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="add_responsable">Responsable</a></li>
+            <li><a href="#" id="add_asistentes">Asistentes</a></li>
+            <li><a href="#" id="add_asunto">Asunto</a></li>
+            <li><a href="#" id="add_fecha">Fecha</a></li>
+            <li><a href="#" id="add_hora_inicio">Hora de inicio</a></li>
+            <li><a href="#" id="add_hora_final">Hora de finalización</a></li>
+            <li><a href="#" id="add_puntos">Puntos tratados</a></li>
+            <li><a href="#" id="add_acuerdos">Acuerdos</a></li>
+          </ul>
+        </li>
+        <li><a href="#" id="remove">Limpiar campos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End navbar -->
 
 <br />
 <br />
@@ -23,9 +54,37 @@
 
 <script type="text/javascript">
   $("document").ready(function(){
-    $("#add").click(function () {
-      a = '<b>Responsable:</b><br /><input id="id_responsable" name="responsable" type="text" required /><br />'
-      $("#campos").append(a);
+    $("#add_responsable").click(function () {
+      add_responsable = '<b>Responsable:</b><br /><input id="id_responsable" name="responsable" type="text" required /><br />';
+      $("#campos").append(add_responsable);
+    });
+    $("#add_asistentes").click(function () {
+      add_asistentes = '<b>Asistentes:</b><br /><input id="id_asistentes" name="asistentes" type="text" required /><br />';
+      $("#campos").append(add_asistentes);
+    });
+    $("#add_asunto").click(function () {
+      add_asunto = '<b>Asunto:</b><br /><input id="id_asunto" name="asunto" type="text" required /><br />';
+      $("#campos").append(add_asunto);
+    });
+    $("#add_fecha").click(function () {
+      add_fecha = '<b>Fecha:</b><br /><input id="id_fecha" name="fecha" type="text" required /><br />';
+      $("#campos").append(add_fecha);
+    });
+    $("#add_hora_inicio").click(function () {
+      add_hora_inicio = '<b>Hora de inicio:</b><br /><input id="id_hora_inicio" name="hora_inicio" type="text" required /><br />';
+      $("#campos").append(add_hora_inicio);
+    });
+    $("#add_hora_final").click(function () {
+      add_hora_final = '<b>Hora de finalización:</b><br /><input id="id_hora_final" name="hora_final" type="text" required/><br />';
+      $("#campos").append(add_hora_final);
+    });
+    $("#add_puntos").click(function () {
+      add_puntos = '<b>Puntos tratados:</b><br /><input id="id_puntos" name="puntos" type="text" required /><br />';
+      $("#campos").append(add_puntos);
+    });
+    $("#add_acuerdos").click(function () {
+      add_acuerdos = '<b>Acuerdos:</b><br /><input id="id_acuerdos" name="acuerdos" type="text" required /><br />';
+      $("#campos").append(add_acuerdos);
     });
     $("#remove").click(function(){
       $("#campos").empty();
