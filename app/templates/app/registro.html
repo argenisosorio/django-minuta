@@ -2,10 +2,17 @@
 {% block titulo %}Registro{% endblock %}
 {% block cuerpo %}
 <h1>Minuta</h1>
+
+<button id="add">Responsable</button>
+<button id="remove">Limpiar campos</button>
+
+<br />
+<br />
+
 <form method="POST"> {% csrf_token %}
 
-  <b>Responsable:</b> <br />
-  <input id="id_responsable" name="responsable" type="text" required />
+  <div id="campos">
+  </div>
 
   <br />
   <br />
@@ -13,6 +20,18 @@
   <button class="btn btn-success" type="submit">Guardar</button>
   <button class="btn btn-info" type="reset">Limpiar</button>
 </form>
+
+<script type="text/javascript">
+  $("document").ready(function(){
+    $("#add").click(function () {
+      a = '<b>Responsable:</b><br /><input id="id_responsable" name="responsable" type="text" required /><br />'
+      $("#campos").append(a);
+    });
+    $("#remove").click(function(){
+      $("#campos").empty();
+    });
+});
+</script>
 
 <br />
 {% endblock %}
