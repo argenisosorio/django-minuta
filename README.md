@@ -6,7 +6,7 @@ Django==1.10
 Python 2.7.x
 ```
 
-## Cammpos del modelo de datos
+## Campos del modelo de datos
 
 Responsable<br />
 Asistentes<br />
